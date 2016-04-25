@@ -103,10 +103,10 @@ class CpasbienProvider(generic.TorrentProvider):
             title = str(link.text).lower().strip()  
             pageURL = link['href']
 
-            if "vostfr" in title and ((not show.subtitles) or show.audio_lang == "fr" or french):
-                continue
-            if "french" in title and show.audio_lang == "en" and (not french):
-                continue
+           # if "vostfr" in title and ((not show.subtitles) or show.audio_lang == "fr" or french):
+           #     continue
+           # if "french" in title and show.audio_lang == "en" and (not french):
+           #     continue
 
             #downloadTorrentLink = torrentSoup.find("a", title.startswith('Cliquer'))
             tmp = pageURL.split('/')[-1].replace('.html','.torrent')
@@ -115,7 +115,7 @@ class CpasbienProvider(generic.TorrentProvider):
 
             if downloadTorrentLink:
                 
-                downloadURL = downloadTorrentLink
+                downloadURL = down#loadTorrentLink
 
                 if "720p" in title:
                     if "bluray" in title:
