@@ -115,7 +115,7 @@ class CpasbienProvider(generic.TorrentProvider):
 
             if downloadTorrentLink:
                 
-                downloadURL = down#loadTorrentLink
+                downloadURL = downloadTorrentLink
 
                 if "720p" in title:
                     if "bluray" in title:
